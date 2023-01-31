@@ -1,0 +1,678 @@
+:root {
+    --beige-color: #f3f1e8;
+    --blue-color: #086bb5;
+    --light-blue-color: rgb(71, 170, 216);
+    --yellow-color: #f2e951;
+    --green-color:#029405;
+    --dark-blue-color: #004e97;
+    --note-color:#9a9064;
+    --gray-color: #dddddd;
+    --dark-gray-color: #a1a1a1;
+    --gray-square-size: 60px;
+    --options-title-height: 50px;
+}
+
+body {
+    font-size: 16px;
+    color: black;
+}
+section {
+    padding: 80px 0;
+}
+h2 {
+    font-size: 2rem;
+    font-size: clamp(1.25rem, 0.9rem + 2.3vw, 2rem);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
+}
+h3 {
+    font-size: 1.5rem;
+    font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.5rem);
+    font-weight: 700;
+}
+
+main img {
+    width: 100%;
+}
+a:hover img {
+    opacity: initial;
+}
+
+span.note {
+    /* color: var(--note-color); */
+    display: block;
+    font-size: 0.7rem;
+}
+span.note::before, ul.notes > li::before {
+    content: '※';
+    position: relative;
+}
+.flame-line {
+    margin-bottom: 60px;
+}
+.mobile-hidden {
+    display: block;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background: url(../img/solar-img3.jpg) no-repeat center bottom;
+    background-size: cover;
+    border-radius: 0;
+}
+
+/* Intro Section  */
+.catchphrase {
+    text-align: center;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    margin-bottom: 60px;
+    font-weight: bold;
+    position: relative;
+}
+.catchphrase::before, .catchphrase::after {
+    content: url(../img/service/fukidashi.png);
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.catchphrase::before {
+    left: 0;
+}
+.catchphrase::after {
+    right: 0;
+    transform: scaleX(-1);
+}
+.catchphrase .h1 {
+    font-size: 3.5rem;
+    font-size: clamp(1.25rem, 2rem + 2vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--blue-color);
+}
+.catchphrase span {
+    font-size: 2rem;
+    font-size: clamp(1.25rem, 0.9rem + 2.3vw, 2rem);
+}
+.intro_point {
+    display: flex;
+    justify-content: center;
+    column-gap: 2vw;
+}
+.intro_point_item {
+    background: linear-gradient(var(--blue-color), 75%, var(--light-blue-color));
+    border-radius: 50%;
+    flex: 1;
+    /* min-width: 120px; */
+    max-width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.intro_point_item::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+.intro_point_item p {
+    font-size: 0.85rem;
+    font-size: clamp(0.85rem, 0.5rem + 1.5vw, 1.72rem);
+    line-height: 1.3;
+    color: white;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+.intro_point_item p::before {
+    content: "";
+    position: relative;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2em;
+    height: 2em;
+    margin: 0 auto 0.3em;
+}
+.intro_point_item.point_one p::before {
+    background-image: url(../img/service/icon_panel.png);
+}
+.intro_point_item.point_two p::before {
+    background-image: url(../img/service/icon_plan.png);
+}
+.intro_point_item.point_three p::before {
+    background-image: url(../img/service/icon_maintenance.png);
+}
+
+.intro_point_item span {
+    color: var(--yellow-color);
+    font-size: 120%;
+}
+
+
+/* Concerns Section  */
+#concerns {
+    background: var(--blue-color);
+}
+#concerns h2 {
+    color: white;
+    /* margin-bottom: 1em; */
+    font-size: 3.5rem;
+    font-size: clamp(1.25rem, 1rem + 3vw, 3.5rem);
+}
+#concerns h2 span {
+    display: inline-block;
+    animation: rock 3s infinite alternate-reverse;
+}
+@keyframes rock {
+    from {
+        transform: rotate(-10deg)
+    }
+    to {
+        transform: rotate(27deg);
+    }
+}
+.concerns {
+    display: block;
+    position: relative;
+    height: 400px;
+}
+.concerns .bubbles {
+    margin-bottom: 20px;
+}
+.concerns .bubbles .bubble {
+    width: 35%;
+    max-width: 325px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 38% 62% 41% 59% / 49% 37% 63% 51% ;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.2rem);
+    font-style: italic;
+    position: absolute;
+    box-shadow: 1px 1px 5px black;
+}
+.bubble:nth-child(1) {
+    bottom: 25%;
+    left: 0;
+}
+.bubble:nth-child(2) {
+    top: 10%;
+    left: 12%;
+}
+.bubble:nth-child(3) {
+    top: 10%;
+    right: 12%;
+}
+.bubble:nth-child(4) {
+    bottom: 25%;
+    right: 0;
+}
+.scream-image {
+    max-width: 200px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.scream-image img {
+    animation: shaking 1s infinite alternate-reverse;
+}
+@keyframes shaking {
+    from {
+        transform: rotate(-3deg);
+    }
+    to {
+        transform: rotate(3deg);
+    }
+}
+@media screen and (max-width: 32em) {
+    .concerns {
+        height: auto;
+    }
+    .concerns .bubbles .bubble {
+        position: relative;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .scream-image {
+        position: relative;
+        max-width: 100px;
+    }
+}
+    
+
+
+/* Support Section  */
+#support {
+    background: var(--gray-color);
+    padding-bottom: calc(50px + var(--options-title-height));
+    overflow: hidden;
+}
+#support h2 {
+    padding: 1em 0;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    margin-bottom: 1em;
+    max-width: 90%;
+    margin-inline: auto;
+}
+#support .two-col {
+    display: flex;
+    gap: 20px;
+}
+#support .two-col > div {
+    flex: 1;
+}
+#support .support-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+#support .support-map img {
+    object-fit: contain;
+    height: 100%;
+}
+#support .support-map .fees {
+    border: 2px solid black;
+    border-radius: 15px;
+    background: white;
+    font-weight: 900;
+    padding: 20px 20px 10px;
+    position: relative;
+    width: 80%;
+    list-style: none;
+}
+#support .support-map .fees li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+#support .support-map .support-fee {
+    color: var(--blue-color);
+    font-size: 2rem;
+    font-size: clamp(1.5rem, 1.3rem + 2vw, 2.5rem);
+    text-shadow: 1px 1px 2px var(--dark-blue-color);
+    padding-left: 5%;
+    white-space: nowrap;
+    display: inline-block;
+}
+#support .support-map .support-fee-extra {
+    left: 17%;
+    display: block;
+    position: relative;
+}
+#support .support-map .fees img {
+    position: absolute;
+    bottom: -5%;
+    right: -20%;
+    width: 35%;
+    height: auto;
+    animation: mega 1s infinite alternate-reverse;
+}
+@keyframes mega {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.02)
+    }
+    
+}
+
+#support .table-title {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+#support table {
+    background: white;
+    box-sizing: content-box;
+    width: 100%;
+    margin-bottom: 0;
+}
+#support table th, #support table td {
+    border: 2px solid var(--dark-gray-color);
+    text-align: center;
+    color: black;
+    line-height: 2;
+    line-height: 1;
+    padding: 10px 0;
+}
+#support table th {
+    color: white;
+    background: var(--blue-color);
+}
+
+
+/* Options Section  */
+#options {
+    border-top: 5px solid var(--blue-color);
+    position: relative;
+}
+#options h2 {
+    color: var(--blue-color);
+    font-weight: 700;
+    border: 5px solid var(--blue-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: none;
+    position: absolute;
+    top: calc(-1*var(--options-title-height));
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    height: var(--options-title-height);
+    background: white;
+    padding: 10px 20px 0;
+
+}
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 10px;
+    row-gap: 20px;
+}
+.option {
+    flex: 1;
+    background: var(--gray-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.option .option-title {
+    text-align: center;
+    background: var(--blue-color);
+    color: white;
+    font-size: 1.7rem;
+    line-height: 2.5;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.option-title::before {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+#option_1 .option-title::before {
+    background-image: url(../img/service/icon_option_eye.png);
+}
+#option_2 .option-title::before {
+    background-image: url(../img/service/icon_option_kusa.png);
+}
+#option_3 .option-title::before {
+    background-image: url(../img/service/icon_option_futaba.png);
+}
+#option_4 .option-title::before {
+    background-image: url(../img/service/icon_option_panel.png);
+}
+
+.option-ribbon {
+    content: "";
+    background-image: url(../img/service/ribbon.png);
+    background-size: 100% 100%;
+    width: 100%;
+    position: relative;
+    left: -6px;
+}
+.option-image, .option-text {
+    padding: 0 20px;
+}
+.option-image img {
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 2px black;
+}
+.option-fee {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+.option-fee-text {
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-size: 1.2rem;
+}
+.option-fee-yen {
+    color: var(--blue-color);
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    /* font-family: "Times New Roman", Times, serif; */
+}
+
+
+
+/* Contact Section  */
+#contact {
+    background: var(--dark-blue-color);
+    color: white;
+}
+#contact h2 {
+    text-align: center;
+    line-height: 1.5;
+    /* word-break: keep-all; */
+    margin-bottom: 2rem;
+}
+#contact h2 p {
+    font-size: 1.2rem;
+    word-break: keep-all;
+    color: white;
+}
+#contact h2 span {
+    color: var(--yellow-color);
+    font-size: 1rem;
+}
+#contact .telemail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+#contact .telemail .telephono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#contact .telemail .telephono a {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 34px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.3s;
+    width: 100%;
+}
+#contact .telemail .telephono a:hover {
+    color: var(--yellow-color);
+}
+#contact .telemail .telephono a img {
+    width: auto;
+    height:36px;
+}
+#contact .telemail .telephono p, #contact .telemail .e-rika p {
+    background: white;
+    color: var(--dark-blue-color);
+    font-weight: 700;
+}
+#contact .telemail .next {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+#contact .telemail .e-rika a {
+    display: block;
+    color: white;
+    position: relative;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 2rem;
+    transition: all 0.3s;
+}
+#contact .telemail .e-rika a::before {
+    content: "\f0e0";
+    font-family: "Font Awesome 6 Free";
+    padding-right: 10px;
+}
+#contact .telemail .e-rika a:hover {
+    color: var(--yellow-color);
+    border-color: var(--yellow-color);
+}
+
+
+/* SNS Section  */
+#sns {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: white;
+}
+#sns .instagram {
+    display: flex;
+    gap: 20px;
+}
+#sns .instagram > div {
+    flex: 1;
+}
+#sns .insta-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#sns .insta-text h2 {
+    text-shadow: 2px 2px 2px black;
+}
+#sns .insta-text > p {
+    font-size: 1.5rem;
+    font-size: clamp(1.17rem, 0.8rem + 0.7vw, 1.5rem);
+    text-shadow: 2px 2px 2px black;
+}
+#sns a.insta-button {
+    background: white;
+    display: flex;
+    border-radius: 25px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 2px 2px 2px #d6249f;
+    transition: all 0.3s;
+}
+#sns a.insta-button:hover {
+    transform: translate(2px, 2px);
+}
+#sns .insta-button img {
+    width: 20px;
+}
+#sns .insta-button p {
+    color: black;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 0;
+    background: hsl(226deg, 81%, 56%);
+    background: linear-gradient(45deg, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background-size: 500%;
+    background-position: left;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-animation: text-animation 2s infinite alternate;
+    animation: text-animation 2s infinite alternate;
+}
+@keyframes text-animation {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 100%;
+    }
+}
+#sns .insta-image img {
+    box-shadow: 2px 2px 5px black;
+}
+
+
+/* Media Queries  */
+/* Tablet  */
+@media screen and (max-width:75em) {
+
+    #options .option {
+        width: 45%;
+        flex: none;
+    }
+}
+
+/* Mobile  */
+.pc-hidden {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .pc-hidden {
+        display: block;
+    }
+    section {
+        padding: 25px 0;
+    }
+    .catchphrase {
+        margin-bottom: 30px;
+    }
+    .catchphrase::before, .catchphrase::after {
+        display: none;
+    }
+    #support .two-col {
+        flex-direction: column;
+    }
+    #support .support-map .fees {
+        width: 90%;
+    }
+    #support table th, #support table td {
+        font-size: 0.9rem;
+    }
+    #options .option {
+        width: 100%;
+    }
+    #options .option-ribbon {
+        left: -10px;
+    }
+    #options .option-image {
+        display: flex;
+        justify-content: space-between;
+    }
+    #options .option-image img {
+        width: 49%;
+    }
+    #contact .telemail .telephono a {
+        font-size: 2.5rem;
+    }
+    #contact .telemail .telephono a img {
+        height: 30px;
+    }
+    #contact .telemail .telephono p {
+        font-size: 0.85rem;
+    }
+    #sns .instagram {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
