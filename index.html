@@ -1,5 +1,4 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -9,8 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="author" content="株式会社LC-JAPAN 自然エネルギー事業" />
     <meta name="copyright" content="株式会社LC-JAPAN,自然エネルギー事業" />
-    <meta name="Description"
-        content="株式会社LC-JAPANでは太陽光発電システムのメンテナンスサービスや、遠隔監視システムの販売をおこなっています。プロの目で発電システムの安定的かつ安全な運用をサポートいたします。" />
+    <meta name="Description" content="株式会社LC-JAPANでは太陽光発電システムのメンテナンスサービスや、遠隔監視システムの販売をおこなっています。プロの目で発電システムの安定的かつ安全な運用をサポートいたします。" />
     <meta name="Keywords" content="メンテナンス,遠隔監視,太陽光発電,パネル洗浄,オプション" />
     <title>株式会社LC-JAPAN | 太陽光発電メンテナンスと遠隔監視のご紹介</title>
 
@@ -23,9 +21,7 @@
     <link rel="stylesheet" href="css/service.css">
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- gsap  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
@@ -47,7 +43,16 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-inverse bg-inverse-custom navbar-fixed-top">
+    <!-- Just a memo div  -->
+    <div style="padding: 20px;">
+        <p>Actual page available:
+            <a href="https://lcom-energy.jp/service" target="_blank" style="color: red; font-weight: 600;">HERE</a>
+            <br>
+            PDF used as the design:
+            <a href="img/solar_flyer_02.pdf" target="_blank" style="color: red; font-weight: 600;">Download</a>
+        </p>
+    </div>
+    <nav class="navbar navbar-dark bg-inverse bg-inverse-custom navbar-fixed-top" style="position: relative!important;">
         <div class="container">
             <span class="pc">
                 <a class="navbar-brand" href="http://lcom-group.jp">
@@ -63,17 +68,14 @@
                 </a>
             </span>
 
-            <a class="navbar-toggler hidden-md-up pull-right" data-toggle="collapse" href="#collapsingNavbar"
-                aria-expanded="false" aria-controls="collapsingNavbar">
+            <a class="navbar-toggler hidden-md-up pull-right" data-toggle="collapse" href="#collapsingNavbar" aria-expanded="false" aria-controls="collapsingNavbar">
                 &#9776;
             </a>
 
-            <div id="collapsingNavbar" class="collapse navbar-toggleable-custom" role="tabpanel"
-                aria-labelledby="collapsingNavbar">
+            <div id="collapsingNavbar" class="collapse navbar-toggleable-custom" role="tabpanel" aria-labelledby="collapsingNavbar">
                 <ul class="nav navbar-nav pull-right">
                     <li class="nav-item nav-item-toggable">
-                        <a class="nav-link" href="index.html"><span class="cap"><img src="img/home.png" width="18"
-                                    height="14" />ホーム</span></a>
+                        <a class="nav-link" href="index.html"><span class="cap"><img src="img/home.png" width="18" height="14" />ホーム</span></a>
                     </li>
                     <li class="nav-item nav-item-toggable">
                         <a class="nav-link" href="solar.html">
@@ -105,18 +107,14 @@
                     </li>
                     <li class="navbar-divider hidden-sm-down"></li>
                     <li class="nav-item dropdown nav-dropdown-search hidden-sm-down">
-                        <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="icon-search"></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-search"
-                            aria-labelledby="dropdownMenu1">
-                            <form action="https://www.google.com/search" class="navbar-form" 　name="" id=""
-                                method="get">
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-search" aria-labelledby="dropdownMenu1">
+                            <form action="https://www.google.com/search" class="navbar-form" 　name="" id="" method="get">
                                 <input type="hidden" name="hl" value="ja">
                                 <input type="hidden" name="as_sitesearch" value="https://www.lcom-energy.jp">
-                                <input class="form-control navbar-search-input" name="q" type="text"
-                                    placeholder="Search">
+                                <input class="form-control navbar-search-input" name="q" type="text" placeholder="Search">
                             </form>
                         </div>
                     </li>
@@ -129,8 +127,7 @@
 
     <div class="container">
         <div class="page-navi">
-            <a href="solar.html">太陽光発電トップ</a> | <a href="pursuit.html">追尾型</a> | <a href="business.html">産業用 | <a
-                    href="rikuyane.html">集合住宅向け</a> | <a href="homes.html">個人住宅向け</a> | <font color="#b47800">メンテナンスサービス
+            <a href="solar.html">太陽光発電トップ</a> | <a href="pursuit.html">追尾型</a> | <a href="business.html">産業用 | <a href="rikuyane.html">集合住宅向け</a> | <a href="homes.html">個人住宅向け</a> | <font color="#b47800">メンテナンスサービス
                 </font>
         </div>
     </div>
@@ -475,8 +472,7 @@
         }());
     </script>
     <noscript>
-        <iframe src="//b.yjtag.jp/iframe?c=yh88pkl" width="1" height="1" frameborder="0" scrolling="no" marginheight="0"
-            marginwidth="0"></iframe>
+        <iframe src="//b.yjtag.jp/iframe?c=yh88pkl" width="1" height="1" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
     </noscript>
 
     <script src="js/jquery-2.1.1.min.js"></script>
